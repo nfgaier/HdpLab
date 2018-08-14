@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ipaddr=$1
+
+rack=`echo $ipaddr | cut -f1-4 -d '.' `
+
+if [ -z "$rack" ] ; then
+  echo -n "/default-rack"
+else
+  echo -n "/$rack"
+fi
