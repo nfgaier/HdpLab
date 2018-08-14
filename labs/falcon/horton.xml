@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cluster colo="local" description="" name="horton" xmlns="uri:falcon:cluster:0.1">
+<interfaces>
+<interface type="readonly" endpoint="hftp://node1:50070" version="2.6.0" />
+<interface type="write" endpoint="hdfs://node1:8020" version="2.6.0" />
+<interface type="execute" endpoint="node1:8050" version="2.6.0" />
+<interface type="workflow" endpoint="http://node1:11000/oozie/" version="4.1.0" />
+<interface type="messaging" endpoint="tcp://node1:61616?daemon=true" version="5.1.6" />
+</interfaces> <locations>
+<location name="staging" path="/apps/falcon/horton/staging" /> <location name="temp" path="/tmp" />
+<location name="working" path="/apps/falcon/horton/working" />
+</locations> </cluster>
+

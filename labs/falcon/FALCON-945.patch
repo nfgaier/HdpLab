@@ -1,0 +1,25 @@
+From 16b841430c0ddeb438a106bc690b4fd8c222e83e Mon Sep 17 00:00:00 2001
+From: Adam Kawa <adam@getindata.com>
+Date: Fri, 12 Dec 2014 10:24:23 +0100
+Subject: [PATCH] FALCON-945 Fix broken lineage feature in Web-UI
+
+---
+ html5-ui/js/falcon-lineage.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/html5-ui/js/falcon-lineage.js b/html5-ui/js/falcon-lineage.js
+index b554c80..e87529b 100644
+--- a/html5-ui/js/falcon-lineage.js
++++ b/html5-ui/js/falcon-lineage.js
+@@ -21,7 +21,7 @@
+ 
+   dust.loadSource(dust.compile($('#lineage-info-tmpl').html(), 'info'));
+   var CIRCLE_RADIUS = 12, RANK_SEPARATION = 120, LABEL_WIDTH = 120, LABEL_HEIGHT = 80, LABEL_PADDING = 20;
+-  var PREFIX = '/api/graphs/lineage';
++  var PREFIX = '/api/metadata/lineage';
+ 
+   var data = {
+     queue : {},
+-- 
+1.9.3 (Apple Git-50)
+

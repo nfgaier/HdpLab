@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<feed description="" name="data-feed" xmlns="uri:falcon:feed:0.1">
+<frequency>days(1)</frequency>
+
+<clusters>
+<cluster name="horton" type="source">
+<validity start="DATE1T00:00Z" end="DATE2T00:00Z"/>
+<retention limit="days(7)" action="delete"/> 
+</cluster>
+
+<cluster name="horton-bkp" type="target">
+<validity start="DATE1T00:00Z" end="DATE2T00:00Z"/> 
+<retention limit="months(1)" action="delete"/>
+<locations>
+<location type="data" path="/user/root/horton-bkp/email-logs" /> </locations>
+</cluster> 
+</clusters>
+
+<locations>
+<location type="data" path="/user/root/horton/email-logs" />
+</locations>
+
+<ACL owner="root" group="users" permission="0755" />
+<schema location="/none" provider="none"/> 
+</feed>
